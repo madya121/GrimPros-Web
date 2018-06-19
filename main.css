@@ -1,0 +1,275 @@
+html, body {
+  height: 100%;
+  margin: 0px;
+  min-width: 1300px;
+}
+
+a:visited { text-decoration: none; color:white; }
+a:hover { text-decoration: none; color:white; }
+a:focus { text-decoration: none; color:white; }
+a:hover, a:active { text-decoration: none; color:white; }
+a:-webkit-any-link { text-decoration: none; color:white; }
+
+.roojack-section {
+  background-color: white;
+  width: 50%;
+  height: 100%;
+  float: left;
+  
+  background-image: 
+    linear-gradient(
+      rgba(255, 214, 170, 0) 35%, 
+      rgba(255, 214, 170, 1) 50%
+    ),
+    url("https://steamcdn-a.akamaihd.net/steam/apps/728720/ss_c8f23943aaa8b7f851c819d30cb4098801118bab.jpg");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  
+  text-align: center;
+  
+  overflow: hidden;
+}
+
+.roojack-title-image {
+  position: relative;
+  top: 50px;
+  width: 500px;
+  
+  animation-name: roojack-title-animation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes roojack-title-animation {
+    0%   {top: 50px;}
+    50%  {top: 60px;}
+    100% {top: 50px;}
+}
+
+/* Standard syntax */
+@keyframes roojack-title-animation {
+    0%   {top: 50px;}
+    50%  {top: 60px;}
+    100% {top: 50px;}
+}
+
+.maple-image {
+  position: relative;
+  width: 500px;
+  left: -25%;
+  top: -50px;
+  
+  -webkit-transition: transform 0.2s; /* Safari */
+  transition: transform 0.2s;
+}
+
+.maple-image:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.whippy-image {
+  position: relative;
+  width: 400px;
+  top: -80%;
+  right: -25%;
+  
+  -webkit-transition: transform 0.2s; /* Safari */
+  transition: transform 0.2s;
+}
+
+.whippy-image:hover {
+  transform: scale(1.1, 1.1);
+}
+
+.roojack-information {
+  font-family: 'Press Start 2P', cursive;
+  position: absolute;
+  bottom: 70px;
+  width: 50%;
+  text-align: center;
+}
+
+.roojack-button {
+  padding: 15px;
+  border-style: solid;
+  border-width: 2px;
+  color: black !important;
+  
+  -webkit-transition: border-color 0.5s; /* Safari */
+  transition: border-color 0.5s;
+}
+
+.roojack-button:hover {
+  border-color: white;
+  color: black;
+  cursor: pointer;
+}
+
+.fa-lg {
+  vertical-align: 0 !important;
+}
+
+.grimpros-image {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  width: 80px;
+  background-color: black;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+/****************************************************************************************/
+
+.arduboy-section {
+  background-color: black;
+  width: 50%;
+  height: 100%;
+  float: right;
+}
+
+.arduboy-title {
+  position: absolute;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  font-size: 80px !important;
+  margin: 30px;
+}
+
+.arduboy-games-title {
+  position: absolute;
+  font-family: 'Press Start 2P', cursive;
+  color: white;
+  font-size: 60px !important;
+  top: 70px;
+  right: 40px;
+}
+
+.arduboy-gadget-image {
+  position: relative;
+  width: 150px;
+
+  -webkit-transition: top 1s, opacity 1s, transform 0.2s; /* Safari */
+  transition: top 1s, opacity 1s, transform 0.2s;
+}
+
+.arduboy-gadget-image:hover {
+  transform: scale(1.2, 1.2);
+  cursor: pointer;
+}
+
+.dancerow-start {
+  top: 350px;
+  left: 40px;
+
+  opacity: 0;
+}
+
+.dancerow {
+  top: 300px;
+  left: 40px;
+
+  opacity: 1;
+}
+
+.prize-frenzy-start {
+  top: 410px;
+  left: -150px;
+
+  opacity: 0;
+}
+
+.prize-frenzy {
+  top: 360px;
+  left: -150px;
+
+  opacity: 1;
+}
+
+.santa-factory-start {
+  top: 300px;
+  left: 30px;
+
+  opacity: 0;
+}
+
+.santa-factory {
+  top: 250px;
+  left: 30px;
+
+  opacity: 1;
+}
+
+.tntank-start {
+  top: 490px;
+  left: -400px;
+
+  opacity: 0;
+}
+
+.tntank {
+  top: 440px;
+  left: -400px;
+
+  opacity: 1;
+}
+
+.detail-section {
+  color: white;
+  width: 400px;
+  text-align: center;
+  position: relative;
+  right: -45%;
+  top: 15%;
+}
+
+.action-detail {
+  font-family: 'Press Start 2P', cursive;
+  border-style: solid;
+  border-width: 2px;
+  padding: 10px;
+  margin: 15px;
+  
+  -webkit-transition: border-color 0.5s; /* Safari */
+  transition: border-color 0.5s;
+}
+
+.action-detail:hover {
+  border-color: #08d133;
+  cursor: pointer;
+}
+
+.detail-title {
+  font-family: 'Press Start 2P', cursive;
+  margin-bottom: 40px;
+  -webkit-transition: opacity 0.2s; /* Safari */
+  transition: opacity 0.2s;
+}
+
+.detail-title.hide {
+  opacity: 0;
+}
+
+.detail-title.show {
+  opacity: 1;
+}
+
+.grim-pros-retro {
+  position: absolute;
+  bottom: 20px;
+  right: 0px;
+  width: 250px;
+}
+
+/****************************************************************************/
+
+@media only screen and (max-width: 1299px) {
+    .roojack-section {
+      display: none;
+    }
+    
+    .arduboy-section {
+      display: none;
+    }
+}
