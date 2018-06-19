@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grim Pros. We Make Games!</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+</head>
+<body>
+  <div class="roojack-section">
+    <img src="images/Roojack.png" class="roojack-title-image" />
+    <img src="images/Maple.png" class="maple-image" />
+    <img src="images/Whippy.png" class="whippy-image" />
+    <div class="roojack-information">
+      <a href="https://store.steampowered.com/app/728720/Roojack/" target="_blank" class="roojack-button">STEAM <i class="fab fa-steam fa-lg"></i></a>
+      <a href="https://grimpros.com/roojack/" target="_blank" class="roojack-button">WEB <i class="fas fa-globe fa-lg"></i></a>
+    </div>
+    <img src="images/GrimPros.png" class="grimpros-image" />
+  </div>
+  <div class="arduboy-section">
+    <h1 class="arduboy-title" >Arduboy</h1>
+    <h3 class="arduboy-games-title">Games</h3>
+    <img src="images/DanceRow.png" class="arduboy-gadget-image dancerow-start" onClick="showDetail(0)"/>
+    <img src="images/SantasFactory.png" class="arduboy-gadget-image santa-factory-start" onClick="showDetail(1)"/>
+    <img src="images/PrizeFrenzy.png" class="arduboy-gadget-image prize-frenzy-start" onClick="showDetail(2)"/>
+    <img src="images/TnTANK.png" class="arduboy-gadget-image tntank-start" onClick="showDetail(3)"/>
+    <div class="detail-section">
+      <h3 class="detail-title show" id="detail-title">Dance Row</h4>
+      <a href="" target="_blank" class="action-detail" id="play-url">PLAY <i class="fas fa-gamepad fa-lg"></i></a>
+      <a href="" target="_blank" class="action-detail" id="source-url">CODE <i class="fab fa-github fa-lg"></i></a>
+    </div>
+    <img src="images/GrimProsRetro.png" class="grim-pros-retro"/>
+  </div>
+</body>
+<script>
+  var arduboyGames = ['dancerow', 'santa-factory', 'prize-frenzy', 'tntank'];
+  var arduboyDetail = [
+    {
+      title: 'Dance Row',
+      play: 'https://felipemanga.github.io/ProjectABE/?url=https://github.com/madya121/DanceRow/releases/download/V.1/Dancerow.ino.arduino_leonardo.hex',
+      source: 'https://github.com/madya121/DanceRow',
+    },
+    {
+      title: 'Santa\'s Factory',
+      play: 'https://felipemanga.github.io/ProjectABE/?url=https://github.com/madya121/Santa-s-Factory/releases/download/V.1/SantaFactory.ino.leonardo.hex',
+      source: 'https://github.com/madya121/Santa-s-Factory',
+    },
+    {
+      title: 'Prize Frenzy',
+      play: 'https://felipemanga.github.io/ProjectABE/?url=https://github.com/madya121/prize-frenzy/releases/download/V.1/Prize_Frenzy.ino.leonardo.hex',
+      source: 'https://github.com/madya121/prize-frenzy',
+    },
+    {
+      title: 'TnTANK',
+      play: 'https://felipemanga.github.io/ProjectABE/?url=https://github.com/madya121/TNTANK/releases/download/v2.0/TNTANK.ino.leonardo.hex',
+      source: 'https://github.com/madya121/TNTANK',
+    },
+  ];
+  
+  function animateTitle(element, id) {
+    setTimeout(function() {
+      element.innerHTML = arduboyDetail[id].title;
+      element.className = element.className.replace('hide', 'show');
+    }, 200);
+  }
+  
+  function showDetail(id) {
+    var element = document.getElementById('detail-title');
+    element.className = element.className.replace('show', 'hide');
+    animateTitle(element, id);
+    
+    var playElement = document.getElementById('play-url');
+    playElement.href = arduboyDetail[id].play;
+    
+    var sourceElement = document.getElementById('source-url');
+    sourceElement.href = arduboyDetail[id].source;
+  }
+
+  setTimeout(function() {
+    function show(element, indx) {
+      setTimeout(function() {
+        element.className = element.className.replace(arduboyGames[indx] + '-start', arduboyGames[indx]);
+      }, indx * 150);
+    }
+
+    for (var i = 0; i < arduboyGames.length; i++) {
+      var element = document.getElementsByClassName(arduboyGames[i] + '-start')[0];
+      show(element, i);
+    }
+  }, 200);
+  
+  showDetail(0);
+</script>
+</html>
