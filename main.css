@@ -1,14 +1,13 @@
 html, body {
   height: 100%;
   margin: 0px;
-  min-width: 1300px;
 }
 
-a:visited { text-decoration: none; color:white; }
-a:hover { text-decoration: none; color:white; }
-a:focus { text-decoration: none; color:white; }
-a:hover, a:active { text-decoration: none; color:white; }
-a:-webkit-any-link { text-decoration: none; color:white; }
+a:visited { text-decoration: none !important; color:white; }
+a:hover { text-decoration: none !important; color:white; }
+a:focus { text-decoration: none !important; color:white; }
+a:hover, a:active { text-decoration: none !important; color:white; }
+a:-webkit-any-link { text-decoration: none !important; color:white; }
 
 .roojack-section {
   background-color: white;
@@ -142,7 +141,7 @@ a:-webkit-any-link { text-decoration: none; color:white; }
   font-family: 'Press Start 2P', cursive;
   color: white;
   font-size: 60px !important;
-  top: 70px;
+  top: 140px;
   right: 40px;
 }
 
@@ -230,6 +229,7 @@ a:-webkit-any-link { text-decoration: none; color:white; }
   border-width: 2px;
   padding: 10px;
   margin: 15px;
+  color: white !important;
   
   -webkit-transition: border-color 0.5s; /* Safari */
   transition: border-color 0.5s;
@@ -271,5 +271,9 @@ a:-webkit-any-link { text-decoration: none; color:white; }
     
     .arduboy-section {
       display: none;
+    }
+    
+    #smaller-screen {
+      display: block !important;
     }
 }
