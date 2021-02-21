@@ -1,3 +1,25 @@
+@media (max-width: 991px) {
+  .card-title {
+    font-size: 3rem !important;
+  }
+
+  .card-text {
+    font-size: 1.7rem !important;
+  }
+
+  .card-footer {
+    font-size: 2.5rem !important;
+  }
+  
+  .button-roojack-smaller {
+    font-size: 2.5rem;
+  }
+  
+  .button-roojack-smaller .roojack-button {
+      border-width: 5px;
+  }
+}
+
 #smaller-screen {
   display: none;
 }

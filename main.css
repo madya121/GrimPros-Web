@@ -20,7 +20,7 @@ a:-webkit-any-link { text-decoration: none !important; color:white; }
       rgba(255, 214, 170, 0) 35%, 
       rgba(255, 214, 170, 1) 50%
     ),
-    url("https://steamcdn-a.akamaihd.net/steam/apps/728720/ss_c8f23943aaa8b7f851c819d30cb4098801118bab.jpg");
+    url("images/Screenshot Level.png");
   background-size: 100%;
   background-repeat: no-repeat;
   
@@ -31,7 +31,7 @@ a:-webkit-any-link { text-decoration: none !important; color:white; }
 
 .roojack-title-image {
   position: relative;
-  top: 50px;
+  top: 0px;
   width: 500px;
   
   animation-name: roojack-title-animation;
@@ -41,36 +41,36 @@ a:-webkit-any-link { text-decoration: none !important; color:white; }
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes roojack-title-animation {
-    0%   {top: 50px;}
-    50%  {top: 60px;}
-    100% {top: 50px;}
+    0%   {top: 0px;}
+    50%  {top: 10px;}
+    100% {top: 0px;}
 }
 
 /* Standard syntax */
 @keyframes roojack-title-animation {
-    0%   {top: 50px;}
-    50%  {top: 60px;}
-    100% {top: 50px;}
+    0%   {top: 0px;}
+    50%  {top: 10px;}
+    100% {top: 0px;}
 }
 
 .maple-image {
   position: relative;
   width: 500px;
   left: -25%;
-  top: -50px;
+  top: -140px;
   
   -webkit-transition: transform 0.2s; /* Safari */
   transition: transform 0.2s;
 }
 
 .maple-image:hover {
-  transform: scale(1.1, 1.1);
+  transform: scale(1.05, 1.05);
 }
 
 .whippy-image {
   position: relative;
   width: 400px;
-  top: -80%;
+  top: -90%;
   right: -25%;
   
   -webkit-transition: transform 0.2s; /* Safari */
@@ -78,7 +78,7 @@ a:-webkit-any-link { text-decoration: none !important; color:white; }
 }
 
 .whippy-image:hover {
-  transform: scale(1.1, 1.1);
+  transform: scale(1.05, 1.05);
 }
 
 .roojack-information {
